@@ -1,0 +1,42 @@
+API -> http request
+Infra -> communicate with db
+Core => business entities
+
+dotnet new sln
+dotnet new webapi -o API
+
+dotnet sln -h
+dotnet sln add API
+
+code .
+cd API
+dotnet run
+
+// get method  
+http://localhost:5185/WeatherForecast
+
+dotnet dev-certs https
+dotnet dec-certs https -t
+
+read the api basics part 1 for the basics to tell in the interview
+
+response codes
+1xx
+2xx
+3xx
+4xx
+5xx
+
+dotnet watch run
+
+dotnet restore -> to restore the packages after installation
+
+DbContext -> combination of UoW and Repo pattern 7.0.0
+
+dotnet ef migrations add InitialCreate -o Data/Migrations
+
+dotnet-ef -h
+
+dotnet tool install --global dotnet-ef --version
+
+dotnet ef database -h
