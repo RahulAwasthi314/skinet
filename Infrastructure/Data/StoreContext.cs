@@ -14,5 +14,9 @@ namespace Infrastructure.Data
         }
         
         public DbSet<Product> Products { get; set; } = default!;
+
+        public DbSet<ProductBrand> ProductBrands { get; set; } = default!;
+
+        public DbSet<ProductType> ProductTypes { get; set; } = default!;
     }
 }

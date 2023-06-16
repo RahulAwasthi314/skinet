@@ -37,7 +37,7 @@ dotnet ef migrations add InitialCreate -o Data/Migrations
 
 dotnet-ef -h
 
-dotnet tool install --global dotnet-ef --version
+dotnet tool install --global dotnet-ef --version 7.0.7
 
 dotnet ef database -h
 
@@ -78,3 +78,9 @@ resolve namespace errors
 build the project
 
 Hiding the bin and objs from view
+
+derive id from baseEntity for generic purposes
+
+drop the previos database
+dotnet ef database drop -p Infrastructure -s API
+dotnet ef migrations remove -p Infrastructure -s API
