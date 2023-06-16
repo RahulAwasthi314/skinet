@@ -40,3 +40,9 @@ dotnet-ef -h
 dotnet tool install --global dotnet-ef --version
 
 dotnet ef database -h
+
+dotnet watch run
+
+create the postman request collection according to required behavior of webapi
+
+url as variable in postman
