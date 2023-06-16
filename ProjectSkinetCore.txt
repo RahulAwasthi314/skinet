@@ -72,3 +72,8 @@ dotnet restore
 entities -> core
 
 data -> infra
+
+resolve namespace errors
+
+build the project
+

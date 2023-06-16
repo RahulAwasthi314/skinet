@@ -1241,7 +1241,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Core": "1.0.0"
+          "Core": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.7",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.7"
         },
         "compile": {
           "bin/placeholder/Infrastructure.dll": {}
@@ -3901,9 +3903,7 @@
     "net7.0": [
       "Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
-      "Microsoft.EntityFrameworkCore >= 7.0.7",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.7",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.7",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -3955,15 +3955,7 @@
             "target": "Package",
             "version": "[7.0.5, )"
           },
-          "Microsoft.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[7.0.7, )"
-          },
           "Microsoft.EntityFrameworkCore.Design": {
-            "target": "Package",
-            "version": "[7.0.7, )"
-          },
-          "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[7.0.7, )"
           },
