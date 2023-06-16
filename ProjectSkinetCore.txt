@@ -46,3 +46,29 @@ dotnet watch run
 create the postman request collection according to required behavior of webapi
 
 url as variable in postman
+
+go to skinet dir..
+dotnet new -h
+
+dotnet new classlib -o Core
+
+dotnet new classlib -o Infrastructure
+
+dotnet sln add Core
+
+dotnet sln add Infrastructure
+
+// add infra as dep to API
+cd API 
+dotnet add reference ../Infrastructure
+
+// add core as dep to Infra
+cd ../Infrastructure
+dotnet add reference ../Core
+
+cd ..
+dotnet restore
+
+entities -> core
+
+data -> infra

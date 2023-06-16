@@ -1226,6 +1226,29 @@
             "rid": "win"
           }
         }
+      },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
+      "Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -3862,10 +3885,21 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
+    },
+    "Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
       "Microsoft.EntityFrameworkCore >= 7.0.7",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.7",
@@ -3879,11 +3913,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\API\\API.csproj",
+      "projectPath": "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\API\\API.csproj",
       "packagesPath": "C:\\Users\\rahulawasthi\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\API\\obj\\",
+      "outputPath": "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rahulawasthi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3900,7 +3934,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Infrastructure\\Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
