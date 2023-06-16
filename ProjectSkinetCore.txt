@@ -77,3 +77,4 @@ resolve namespace errors
 
 build the project
 
+Hiding the bin and objs from view
