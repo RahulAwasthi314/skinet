@@ -23,6 +23,21 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope()) 
+{
+    var Services = scope.ServiceProvider;
+    var loggerFactory = Services.GetRequiredService<ILoggerFactory>();
+    try {
+        var context = Services.GetRequiredService<StoreContext>();
+        // Apply any pending migration to the database
+        await context.Database.MigrateAsync();
+    }
+    catch (Exception ex) {
+        var logger = loggerFactory.CreateLogger<StoreContext>();
+        logger.LogError(ex, "An error occured during migration.");
+    }
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
