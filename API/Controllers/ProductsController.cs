@@ -1,3 +1,5 @@
+using API.DTOs;
+using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
 using Core.Specifications;
@@ -18,7 +20,8 @@ namespace API.Controllers
         public ProductsController(
             IGenericRepository<Product> productRepository,
             IGenericRepository<ProductBrand> productBrandRepository,
-            IGenericRepository<ProductType> productTypeRepository)
+            IGenericRepository<ProductType> productTypeRepository
+            )
         {
             this._productRepository = productRepository;
             this._productBrandRepository = productBrandRepository;
@@ -26,20 +29,45 @@ namespace API.Controllers
         }
 
         [HttpGet("")]
-        public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts() {
+        public async Task<ActionResult<IReadOnlyList<ProductDto>>> GetProducts() {
             var spec = new ProductsWithTypesAndBrandsSpecification();
 
             var products = await _productRepository.ListAsync(spec);
 
-            return Ok(products);
+            return products.Select(product => new ProductDto
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Description = product.Description,
+                PictureUrl = product.PictureUrl,
+                Price = product.Price,
+                ProductBrand = product.ProductBrand.Name,
+                ProductType = product.ProductType.Name,
+            }).ToList();
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Product?>> GetProduct(int id) 
+        public async Task<ActionResult<ProductDto?>> GetProduct(int id) 
         { 
             var spec = new ProductsWithTypesAndBrandsSpecification(id);
             
-            return await _productRepository.GetEntityWithSpec(spec);
+            var product = await _productRepository.GetEntityWithSpec(spec);
+
+            if (product == null) 
+            {
+                return NotFound();
+            }
+
+            return new ProductDto
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Description = product.Description,
+                PictureUrl = product.PictureUrl,
+                Price = product.Price,
+                ProductBrand = product.ProductBrand.Name,
+                ProductType = product.ProductType.Name,
+            };
         }
 
         [HttpGet("brands")]
