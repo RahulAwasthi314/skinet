@@ -30,14 +30,16 @@ namespace API.Controllers
             var spec = new ProductsWithTypesAndBrandsSpecification();
 
             var products = await _productRepository.ListAsync(spec);
-            // var products = await _productRepository.GetAllAsync();
+
             return Ok(products);
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Product?>> GetProduct(int id) 
         { 
-            return await _productRepository.GetByIdAsync(id);
+            var spec = new ProductsWithTypesAndBrandsSpecification(id);
+            
+            return await _productRepository.GetEntityWithSpec(spec);
         }
 
         [HttpGet("brands")]
