@@ -93,3 +93,5 @@ Explicitly specify the SQL server column type that can accommodate all the value
 using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
 
 config classes to tell migration how the tables should be created.
+
+creating generic repository
