@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\API\\API.csproj": {}
+    "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\API\\API.csproj": {}
   },
   "projects": {
-    "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\API\\API.csproj": {
+    "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\API\\API.csproj",
+        "projectPath": "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\API\\API.csproj",
         "packagesPath": "C:\\Users\\rahulawasthi\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\API\\obj\\",
+        "outputPath": "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rahulawasthi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -85,14 +85,14 @@
         }
       }
     },
-    "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Core\\Core.csproj": {
+    "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\rahulawasthi\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Core\\obj\\",
+        "outputPath": "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rahulawasthi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -140,14 +140,14 @@
         }
       }
     },
-    "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\rahulawasthi\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rahulawasthi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -164,8 +164,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Core\\Core.csproj": {
-                "projectPath": "c:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Core\\Core.csproj"
+              "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\rahulawasthi\\GITG00641\\DotNet\\practice\\skinet\\Core\\Core.csproj"
               }
             }
           }

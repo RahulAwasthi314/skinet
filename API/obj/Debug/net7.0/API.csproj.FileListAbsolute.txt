@@ -78,3 +78,6 @@ C:\Users\rahulawasthi\GITG00641\DotNet\practice\skinet\API\bin\Debug\net7.0\Core
 C:\Users\rahulawasthi\GITG00641\DotNet\practice\skinet\API\bin\Debug\net7.0\Infrastructure.dll
 C:\Users\rahulawasthi\GITG00641\DotNet\practice\skinet\API\bin\Debug\net7.0\Infrastructure.pdb
 C:\Users\rahulawasthi\GITG00641\DotNet\practice\skinet\API\bin\Debug\net7.0\Core.pdb
+C:\Users\rahulawasthi\GITG00641\DotNet\practice\skinet\API\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\rahulawasthi\GITG00641\DotNet\practice\skinet\API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\rahulawasthi\GITG00641\DotNet\practice\skinet\API\bin\Debug\net7.0\API.staticwebassets.runtime.json
