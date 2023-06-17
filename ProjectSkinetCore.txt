@@ -95,3 +95,24 @@ using 'HasColumnType', specify precision and scale using 'HasPrecision', or conf
 config classes to tell migration how the tables should be created.
 
 creating generic repository
+generic repo -> code using this repo can build its own queries to obtain subsets of data, this referrs to as a leaky abstration
+too much generalization
+
+specification pattern -> describe a query in an object
+returns an Iqueryable<T>
+generic list method takes specification as parameter
+specification can have meaningful name
+
+ProductsWithTypesAndBrandsSpecification
+
+specification                                    Generic repository
+I need all products
+with 'red' in the           IQueryable<T>        ListAsync(specification)
+name and include the 
+product types and brands
+
+var typeId = 1;
+var products = _context.Products.Where(p => p.ProductTypeId == typeId)
+                                .Include(p => p.ProductType)
+                                .Include(p => p.ProductBrand)
+                                .ToListAsync();
