@@ -12,7 +12,10 @@ namespace API.Helper
     {
         public MapperProfiles()
         {
-            CreateMap<Product, ProductDto>().ReverseMap();
+            CreateMap<Product, ProductDto>()
+                .ForMember (d => d.ProductBrand, o => o.MapFrom(s => s.ProductBrand.Name))
+                .ForMember (d => d.ProductType, o => o.MapFrom(s => s.ProductType.Name))
+                .ReverseMap();
         }
     }
 }

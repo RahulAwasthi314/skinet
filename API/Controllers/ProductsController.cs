@@ -16,16 +16,19 @@ namespace API.Controllers
         private readonly IGenericRepository<Product> _productRepository;
         private readonly IGenericRepository<ProductBrand> _productBrandRepository;
         private readonly IGenericRepository<ProductType> _productTypeRepository;
+        private readonly IMapper _mapper;
 
         public ProductsController(
             IGenericRepository<Product> productRepository,
             IGenericRepository<ProductBrand> productBrandRepository,
-            IGenericRepository<ProductType> productTypeRepository
+            IGenericRepository<ProductType> productTypeRepository,
+            IMapper mapper
             )
         {
             this._productRepository = productRepository;
             this._productBrandRepository = productBrandRepository;
             this._productTypeRepository = productTypeRepository;
+            this._mapper = mapper;
         }
 
         [HttpGet("")]
@@ -34,16 +37,9 @@ namespace API.Controllers
 
             var products = await _productRepository.ListAsync(spec);
 
-            return products.Select(product => new ProductDto
-            {
-                Id = product.Id,
-                Name = product.Name,
-                Description = product.Description,
-                PictureUrl = product.PictureUrl,
-                Price = product.Price,
-                ProductBrand = product.ProductBrand.Name,
-                ProductType = product.ProductType.Name,
-            }).ToList();
+            return Ok(_mapper
+                .Map<IReadOnlyList<Product>, IReadOnlyList<ProductDto>>(products));
+            
         }
 
         [HttpGet("{id}")]
@@ -58,16 +54,7 @@ namespace API.Controllers
                 return NotFound();
             }
 
-            return new ProductDto
-            {
-                Id = product.Id,
-                Name = product.Name,
-                Description = product.Description,
-                PictureUrl = product.PictureUrl,
-                Price = product.Price,
-                ProductBrand = product.ProductBrand.Name,
-                ProductType = product.ProductType.Name,
-            };
+            return Ok(_mapper.Map<Product, ProductDto>(product));
         }
 
         [HttpGet("brands")]
