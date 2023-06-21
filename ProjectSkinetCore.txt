@@ -22,10 +22,10 @@ read the api basics part 1 for the basics to tell in the interview
 
 response codes
 1xx
-2xx
-3xx
-4xx
-5xx
+2xx -> Ok
+3xx -> Redirection
+4xx -> Client error
+5xx -> server error
 
 dotnet watch run
 
@@ -116,3 +116,15 @@ var products = _context.Products.Where(p => p.ProductTypeId == typeId)
                                 .Include(p => p.ProductType)
                                 .Include(p => p.ProductBrand)
                                 .ToListAsync();
+
+serving static content on the server
+
+section 7:
+    error handling and exceptions
+    devel exception page
+    validation errors
+    https response errors
+    customizing the error handling
+    middleware
+    Swagger
+

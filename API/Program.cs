@@ -1,7 +1,10 @@
+using API.Errors;
 using API.Helper;
+using API.Middleware;
 using Core.Interfaces;
 using Infrastructure.Data;
 using Infrastructure.Repository;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +12,25 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+builder.Services.Configure<ApiBehaviorOptions>(options => 
+{
+    options.InvalidModelStateResponseFactory = actionContext =>
+    {
+        var errors = actionContext.ModelState
+            .Where(e => e.Value.Errors.Count > 0)
+            .SelectMany(e => e.Value.Errors)
+            .Select(e => e.ErrorMessage)
+            .ToArray();
+        
+        var errorResponse = new ApiValidationErrorResponse 
+        {
+            Errors = errors
+        };
+
+        return new BadRequestObjectResult(errorResponse);
+    }
+});
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? 
     throw new ("Connection String 'DefaultConnection' is not initialized");
@@ -44,12 +66,18 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
+app.UseMiddleware<ExceptionMiddleware>();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+
+
+app.UseStatusCodePagesWithReExecute("/errors/{0}");
 
 app.UseHttpsRedirection();
 
